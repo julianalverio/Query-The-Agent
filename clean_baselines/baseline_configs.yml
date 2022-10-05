@@ -1,0 +1,46 @@
+# maze args
+maze_size_scaling: 8  # 3D
+maze_dimensionality: 2
+maze_width: 5  # prim, obstacle, E
+maze_density: 18  # obstacle
+maze_free_blocks: 3  # block
+maze_num_deadends: 1  # E
+maze_hallway_width: 1  # E
+maze_uniform_goals: False  # only matters for evaluation, non-vds
+maze_bridge_length_upper: 1  # w
+maze_bridge_length_lower: 1  # w
+maze_w_length_upper: 5  # w
+maze_w_length_lower: 5
+env_name: Maze2D-v1
+seed: 0
+experiment_name: placeholder
+
+
+#############################
+
+
+alg: entropy # vds, entropy, or imagined
+maze_type: e
+maze_num_u: 6 # w
+maze_height: 4  # prim, obstacle, E
+
+
+###########################
+
+# baseline-specific args
+# entropy max
+#replay_size: 500000
+max_steps: 150000
+env_max_step: 50
+num_envs: 1  # always 1!!
+epoch_length: 1000  # eval freq
+
+# vds
+dense_reward: False
+vds_alg: her
+num_timesteps: 150000
+size_ensemble: 3
+save_interval: 1
+rollout_length: 50
+n_test_rollouts: 20
+

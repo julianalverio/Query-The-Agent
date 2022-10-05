@@ -1,0 +1,13 @@
+num_steps: 3000001
+replay_size: 1000000
+num_eval_episodes: 10
+eval_freq: 10000
+automatic_entropy_tuning: false
+cores: 8
+cuda: 1
+seed: 0
+save_freq: 200000
+
+robot: ant
+agent_type: td3
+

@@ -1,0 +1,29 @@
+env_name: maze
+maze_size_scaling: 8  # 3D
+maze_dimensionality: 2
+maze_type: e
+maze_num_u: 5 # w
+maze_w_length_upper: 5  # w
+maze_w_length_lower: 5
+maze_bridge_length_upper: 1  # w  
+maze_bridge_length_lower: 1  # w
+maze_uniform_goals: False  # only matters for evaluation, non-vds
+maze_height: 12  # prim, obstacle
+maze_width: 5  # prim, obstacle
+maze_density: 10  # obstacle
+maze_free_blocks: 3  # block
+maze_num_deadends: 1
+maze_hallway_width: 1
+
+compute_value_error: False
+draw_top_n: 200
+#heatmap_type: value_distance
+#heatmap_type: forward_uncertainty  # forward_uncertainty or value_distance or sample_probability
+heatmap_type: sample_probability
+
+seed: 0
+
+
+# deprecated
+target_range_lower: None  # value distance range to highlight
+target_range_upper: None

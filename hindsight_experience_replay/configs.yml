@@ -1,0 +1,113 @@
+#maze_w_length_lower: 5
+#maze_free_blocks: 3  # block
+#maze_density: 10  # obstacle
+#maze_bridge_length_upper: 1  # w
+#maze_bridge_length_lower: 1  # w
+#maze_uniform_goals: False  # only matters for evaluation, non-vds
+#density_bandwidth: 0.1
+#density_alpha: -10  # less than -1 skews toward unlikely states
+#num_random_goals: 1000  # 100 for density, 1K otherwise
+forward_batch_size: 1024  # 1024
+clip_return: 150  # 150 or greater
+n_test_rollouts: 20  # 20
+ensemble_hidden_size: 256  # 256
+replay_k: 4  # 4
+batch_size: 1024  # 1024
+gamma: 0.99  # 0.99
+lr_actor: 0.001  # 0.001
+clip_range: 5  # 5
+noise_clip: 0.5  # 0.5
+policy_noise: 0.2  # 0.2
+seed: 0
+cuda: 1  # 1
+total_num_steps: 150000  # normally 150K
+maze_num_deadends: 1  # E  # 1
+n_curiosity_samples: 16  # 16 for forward uncertainty sampling  # num random actions to consider
+log_q_histogram: False
+log_uncertainty_histogram: False
+uncertainty_vector_sigma: 0.0  # ablation
+maze_w_length_upper: 5  # w
+_3D: False
+initial_gaussian_sigma: 2.2  # 3D
+maze_width: 5  # prim, obstacle, E
+maze_hallway_width: 1  # E
+logging_freq: 1000  # 1K
+init_random_steps: 1000  #1K
+num_noupdate_steps: 50  # 50
+eval_freq: 1000  # normally 1K
+
+# Randomness
+noise_eps: 0.2  # 0.2  # epsilon of noise to add to action at training time
+random_eps: 0.3  # 0.3  # prob for epsilon greedy
+late_noise_eps: 0.2  # 0.2
+late_random_eps: 0.2  # 0.2
+
+# saving
+save: False
+save_freq: 1000
+
+# MISC REMOVE THESE
+new_goal_walk: True  # True
+goal_candidates: 1  # 1
+
+# clean convergence
+use_convergence_l2: True
+convergence_forward_l2: 0.00000000025  # 0.00000000025
+convergence_critic_l2: 0.000000001  # 0.00000001
+convergence_actor_l2: 0.0   # 0.0
+
+# L2 norms + learning rate
+actor_l2_norm: 0.0  # 0.0
+critic_l2_norm: 0.0  # 0.0
+forward_l2_norm: 0.0  # 0.0
+lr_critic: 0.002  # 0.002
+forward_lr: 0.0005  # 0.0005
+reward_lr: 0.0005  # 0.0005
+
+# Q cutoff
+hard_cutoff: -80  # -80
+
+# Goal selection
+use_her: False
+gaussian_sigma: 0.01  # deprecated!
+use_linear_f: True
+linear_f_slope: 626.58  # 626.58
+linear_f_intercept: -591.18  # -591.18
+
+# regression networks
+num_forward_batches: 1
+num_reward_batches: 0
+
+############################################################################
+
+# Critic updates
+n_internal_critics: 3  # 3
+m_target_critics: 2  # 2
+polyak: 0.995  # 0.995
+num_critic_batches: 1  # 1
+
+use_per: False
+use_td_error: True
+beta_steps: 200000
+initial_beta: 0.3  # 0.3
+alpha: 1.0  # 0.6 or 0.7 from paper
+
+# Uncertainty vector
+use_forward_uncertainty: False
+use_uncertainty: True
+use_decompositional: False
+use_decompositional_difference: False
+
+# architecture
+simple_ensemble: False
+bootstrapped: False
+use_gaussian: True
+
+maze_type: e  # w, e, FetchPickAndPlace-v1, FetchReach-v1, FetchPush-v1, FetchSlide-v1
+#maze_type: FetchPush-v1
+maze_height: 9  # prim, obstacle, E
+maze_num_u: 3 # w
+
+# change every time
+exp_name: exp1500
+test: False

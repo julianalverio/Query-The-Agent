@@ -1,0 +1,15 @@
+batch_size: 1000
+expl_noise: 0.1
+gamma: 0.98
+lr: 0.001
+start_steps: 10000
+noise_clip: 0.5
+param_noise_mean: 0
+param_noise_std: 0.01
+hidden_size: 256
+policy_freq: 2
+policy_noise: 0.2
+save_interval: 2000
+tau: 0.005
+episode_length: 50
+

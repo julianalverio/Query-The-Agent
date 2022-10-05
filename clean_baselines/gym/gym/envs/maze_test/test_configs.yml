@@ -1,0 +1,27 @@
+# maze args
+maze_size_scaling: 8  # 3D
+maze_dimensionality: 3
+maze_type: w
+maze_num_u: 3 # w
+maze_w_length_upper: 5  # w
+maze_w_length_lower: 5
+maze_bridge_length_upper: 1  # w
+maze_bridge_length_lower: 1  # w
+maze_uniform_goals: False  # only matters for evaluation, non-vds
+maze_height: 10  # prim, obstacle, E
+maze_width: 8  # prim, obstacle, E
+maze_density: 10  # obstacle
+maze_free_blocks: 3  # block
+maze_num_deadends: 1  # E
+maze_hallway_width: 1  # E
+agent_type: swimmer
+seed: 0
+dense_reward: False
+
+# viewer args
+azimuth: 70
+lookat_0: -10         # x,y,z offset from the object (works if trackbodyid=-1)
+lookat_1: -10
+lookat_2: 0
+distance_ratio: 0.4
+elevation: -45

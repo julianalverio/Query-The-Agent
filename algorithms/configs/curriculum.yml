@@ -1,0 +1,17 @@
+num_steps: 3000001
+replay_size: 1000000
+num_eval_episodes: 10
+eval_freq: 10000
+automatic_entropy_tuning: false
+cores: 8
+cuda: 0
+seed: 0
+save_freq: 200000
+
+robot: maze
+agent_type: td3
+ensemble_lr: 0.0003
+num_samples: 1000
+ensemble_size: 3
+ensemble_hidden_size: 256
+

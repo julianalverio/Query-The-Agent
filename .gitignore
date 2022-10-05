@@ -1,0 +1,5 @@
+sync.py
+sync_perm.py
+*pyc
+*pycache*
+*/logs/*
